@@ -680,10 +680,7 @@ kubectl get secret --namespace prometheus stable-grafana -o jsonpath="{.data.adm
 #
 
 - Now, view the Dashboard in Grafana
-  ![image](https://github.com/user-attachments/assets/d2e7ff2f-059d-48c4-92bb-9711943819c4)
   ![image](https://github.com/user-attachments/assets/3d6652d0-7795-4fe9-8919-f33eac88db73)
-  ![image](https://github.com/user-attachments/assets/13321ee5-5d7b-4976-b409-25d3b865a42a)
-  ![image](https://github.com/user-attachments/assets/75a22e4b-ae81-4cad-9c92-21dd90d126a8)
 
 - <b>Grafana Pod CPU Usage (wanderlust namespace):</b>
   <img src="https://github.com/33Krishna/Wanderlust-Mega-Project/blob/main/Assets/Grafana_frontend.png" width="600" />
