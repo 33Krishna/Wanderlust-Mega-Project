@@ -8,7 +8,7 @@ WanderLust is a simple MERN travel blog website ✈ This project is aimed to hel
 
 # Wanderlust Mega Project End to End Implementation
 
-### In this demo, we will see how to deploy an end to end three tier MERN stack application on EKS cluster.
+### In this project, we will see how to deploy an end to end three tier MERN stack application on EKS cluster.
 
 #
 
@@ -425,6 +425,9 @@ sudo apt-get install trivy -y
 - <b>Now, go to github repository and under <mark>Automations</mark> directory update the <mark>instance-id</mark> field on both the <mark>updatefrontendnew.sh updatebackendnew.sh</mark> with the k8s worker's instance id</b>
   ![image](https://github.com/user-attachments/assets/3cb044b4-df88-4d68-bf7c-775cf78d5bf2)
 
+- <b>Console output of Automations script execution in Jenkins:</b>
+  <img src="https://github.com/33Krishna/Wanderlust-Mega-Project/blob/main/Assets/Jenkins_History.png" width="600" />
+
 #
 
 - <b>Navigate to <mark> Manage Jenkins --> credentials</mark> and add credentials for docker login to push docker image:</b>
@@ -435,12 +438,27 @@ sudo apt-get install trivy -y
 - <b>Create a <mark>Wanderlust-CI</mark> pipeline</b>
   ![image](https://github.com/user-attachments/assets/55c7b611-3c20-445f-a49c-7d779894e232)
 
+- <b>Wanderlust-CI Pipeline Stage View Execution:</b>
+  <img src="https://github.com/33Krishna/Wanderlust-Mega-Project/blob/main/Assets/Jenkin_CI_Image.png" width="600" />
+
+- <b>Wanderlust-CI Build Stage View:</b>
+  <img src="https://github.com/33Krishna/Wanderlust-Mega-Project/blob/main/Assets/Jenkins_CI_2ndTime.png" width="600" />
+
+- <b>Wanderlust-CI Quality Gate Passed:</b>
+  <img src="https://github.com/33Krishna/Wanderlust-Mega-Project/blob/main/Assets/Jenkins_3rdTime.png" width="600" />
+
+- <b>Wanderlust-CI Overall Pipeline View:</b>
+  <img src="https://github.com/33Krishna/Wanderlust-Mega-Project/blob/main/Assets/Jenkins_CI_Pipeline_Overall.png" width="600" />
+
 #
 
 - <b>Create one more pipeline <mark>Wanderlust-CD</mark></b>
   ![image](https://github.com/user-attachments/assets/23f84a93-901b-45e3-b4e8-a12cbed13986)
   ![image](https://github.com/user-attachments/assets/ac79f7e6-c02c-4431-bb3b-5c7489a93a63)
   ![image](https://github.com/user-attachments/assets/46a5937f-e06e-4265-ac0f-42543576a5cd)
+
+- <b>Jenkins Dashboard with both Wanderlust-CI and Wanderlust-CD:</b>
+  <img src="https://github.com/33Krishna/Wanderlust-Mega-Project/blob/main/Assets/Jenkins_full_image.png" width="600" />
 
 #
 
@@ -519,6 +537,10 @@ chmod 777 /var/run/docker.sock
 - <b>Congratulations, your application is deployed on AWS EKS Cluster</b>
   ![image](https://github.com/user-attachments/assets/bc2d9680-fe00-49f9-81bf-93c5595c20cc)
   ![image](https://github.com/user-attachments/assets/1ea9d486-656e-40f1-804d-2651efb54cf6)
+
+- <b>ArgoCD Application Topology and Health Status:</b>
+  <img src="https://github.com/33Krishna/Wanderlust-Mega-Project/blob/main/Assets/ArgoCD.png" width="600" />
+
 - <b>Open port 31000 and 31100 on worker node and Access it on browser</b>
 
 ```bash
@@ -531,6 +553,9 @@ chmod 777 /var/run/docker.sock
 
 - <b>Email Notification</b>
   ![image](https://github.com/user-attachments/assets/0ab1ef47-f939-4618-8651-6aa9274721f4)
+
+- <b>Deployment Success Email Notification:</b>
+  <img src="https://github.com/33Krishna/Wanderlust-Mega-Project/blob/main/Assets/Success_Email_Notification.png" width="600" />
 
 #
 
@@ -659,6 +684,18 @@ kubectl get secret --namespace prometheus stable-grafana -o jsonpath="{.data.adm
   ![image](https://github.com/user-attachments/assets/3d6652d0-7795-4fe9-8919-f33eac88db73)
   ![image](https://github.com/user-attachments/assets/13321ee5-5d7b-4976-b409-25d3b865a42a)
   ![image](https://github.com/user-attachments/assets/75a22e4b-ae81-4cad-9c92-21dd90d126a8)
+
+- <b>Grafana Pod CPU Usage (wanderlust namespace):</b>
+  <img src="https://github.com/33Krishna/Wanderlust-Mega-Project/blob/main/Assets/Grafana_frontend.png" width="600" />
+
+- <b>Grafana Node and Pod CPU Metrics:</b>
+  <img src="https://github.com/33Krishna/Wanderlust-Mega-Project/blob/main/Assets/Grafana_backend.png" width="600" />
+
+- <b>Grafana Pod Network Bandwidth (Receive & Transmit):</b>
+  <img src="https://github.com/33Krishna/Wanderlust-Mega-Project/blob/main/Assets/2_Grafana_Backend.png" width="600" />
+
+- <b>Grafana Overall Network Traffic Gauges & Usage:</b>
+  <img src="https://github.com/33Krishna/Wanderlust-Mega-Project/blob/main/Assets/3_Grafana_Overall.png" width="600" />
 
 #
 
