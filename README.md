@@ -2,7 +2,7 @@
 
 WanderLust is a simple MERN travel blog website ✈ This project is aimed to help people to contribute in open source, upskill in react and also master git.
 
-![Preview Image](https://github.com/33Krishna/wanderlust/assets/wanderlust.png)
+![Preview Image](https://github.com/33Krishna/Wanderlust-Mega-Project/blob/main/Assets/wanderlust.png)
 
 #
 
